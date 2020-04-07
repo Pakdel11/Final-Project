@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="login.css">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/c6484811eb.js" crossorigin="anonymous"></script>
+        <title>login</title>
+    </head>
+<body>
+    <header id="header">
+        <div class="logo">
+            <a href="#" id="loog">KörRr</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="intro-img">
+                <img src="imgs/login.svg" alt="" id="login">
+            </div>
+            <div class="login-container">
+                <div class="profile-img">
+                    <img src="imgs/user.svg" alt="">
+                </div>
+                <div class="welcome-text">
+                    <h1 id="login-text">Login</h1>
+                </div>
+                <div class="inputs-container">
+                    <div class="username inputs">
+                        <span class="user-icon"><i class="fas fa-user"></i></span>
+                        <input id="username" name="name" type="text" required>
+                        <label for="name" class="label-name">
+                            <span class="content-name">Username</span>
+                        </label>
+                    </div>
+                    <div class="password inputs">
+                        <span class="user-icon"><i class="fas fa-lock"></i></span>
+                        <input id="password" name="psd" type="password" required>
+                        <label for="name" class="label-psd">
+                            <span class="content-psd">Password</span>
+                        </label>
+                    </div>
+                    <a href="utb.html" class="frgP">Forgot password?</a>
+                </div>
+                <div class="btn-login">
+                    <button id="send" type="button">Login</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="login.js"></script>
+    
+</body>
+</html>

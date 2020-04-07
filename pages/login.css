@@ -1,0 +1,226 @@
+:root{
+    background-color: #fdf3fc;
+    font-size: 62.5%;
+
+}
+
+*{
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Poppis",Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+h1,h2,h3,h4{
+    margin-bottom: 1rem;
+}
+
+h1  {
+    font-size: 4.4rem;
+    color: #fb3684;
+    margin-bottom: 2rem;
+}
+h1 > span{
+    font-size: 4.2rem;
+    font-weight: 500;
+}
+
+h2{
+    font-size: 4.3rem;
+    margin-bottom: 4rem;
+    font-weight: 700;
+}
+h3{
+    font-size: 2.8rem;
+    font-weight: 500;
+}
+
+
+#loog{
+    font-size: 3rem;
+    font-weight: 600;
+    color: #fb3684;
+    text-decoration: underline;
+
+}
+
+#header{
+    position: fixed;
+    width: 95%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-img{
+    width: 100%;
+    flex: 1;
+    justify-content: flex-start;
+}
+
+#login{
+    opacity: 0.6;
+    object-fit: cover;
+}
+#login-text{
+    color: #fb3685c2;
+    font-weight: 300;
+}
+
+.login-container{
+    flex: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-img{
+    margin-bottom: 1rem;
+    border-radius: 50%;
+}
+.profile-img img{
+    width: 50px;
+    opacity: 0.2;
+}
+
+
+.inputs-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 15px;
+    width: auto;
+}
+
+.user-icon i{
+    color: #999;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+/* inputs */
+
+.inputs{
+    padding-top: 15px;
+    width: auto;
+    background: none;
+    position: relative;
+    overflow: hidden;
+}
+.inputs input{
+    padding: 10px 32px;
+    border: none;
+    outline: none;
+    padding-top: 10px;
+    background: none;
+}
+
+.inputs label{
+    position: absolute;
+    left: 0%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    border-bottom: 2px solid #9999;
+}
+
+.inputs label::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-bottom: 3px solid #fb3684;
+    transform: translateX(-100%);
+    transition: 0.3s;
+}
+
+
+.inputs label span{
+    position: absolute;
+    bottom: 5px;
+    left: 15%;
+    color: rgb(114, 114, 114);
+    font-size: 1.5rem;
+}
+
+
+.username input:focus + .label-name .content-name,
+.username input:valid + .label-name .content-name{
+    transform: translate(-50%, -160%);
+    transition: 0.3s;
+    color: #fb3685ad;
+    font-weight: 600;
+}
+.password input:focus + .label-psd .content-psd,
+.password input:valid + .label-psd .content-psd{
+    transform: translate(-50%, -160%);
+    transition: 0.3s;
+    color: #fb3685ad;
+    font-weight: 600;
+}
+.username input:focus + .label-name::after,
+.username input:valid + .label-name::after,
+.password input:focus + .label-psd::after,
+.password input:valid + .label-psd::after{
+    transform: translateY(0%);
+}
+
+.frgP{
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: 600;
+    color: #999;
+    width: 100%;
+    text-align: right;
+    margin: 1rem 0 0 0;
+}
+.frgP:hover{
+    color: #fb3684;
+    text-decoration: underline;
+}
+.frgP:focus{
+    color: #fb3684;
+    text-decoration: underline;
+
+}
+
+#send{
+    font-size: 2rem;
+    background: #fb3685e1;
+    color: white;
+    padding: 1.2rem 12.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+#send:hover{
+    background: #fb3684;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+#send:focus{
+    background: #fb3684;
+    border-radius: 0;
+    transition: all 0.3s;
+}
+
