@@ -86,10 +86,10 @@ function clearStatusClass(element) {
 // questions
 const questions = [
   {
-    question: 'Vad är den bästa position?',
+    question: 'Vad är den bästa css positionering?',
     answers: [
-      { text: 'baksida', correct: true },
-      { text: 'framsida', correct: false }
+      { text: 'absolute', correct: true },
+      { text: 'relative', correct: false }
     ]
   },
   {

@@ -12,12 +12,14 @@ var data = [
         password: "dd"
     },
     {
-        username: "Ibrahim",
-        password: "Ibrahim"
-    }
+        username: "user",
+        password: "user"
+    },
+    
 ];
 
-btnLogin.addEventListener("click", function(){
+btnLogin.addEventListener("click", login);
+function login(){
 
     var username = document.getElementById("username").value
     var password = document.getElementById("password").value
@@ -26,10 +28,11 @@ btnLogin.addEventListener("click", function(){
             message.appendChild(msg);
     for(let i = 0; i < data.length; i++){
        if(username == data[i].username && password == data[i].password){
-           window.open("/utb.html", "_self");
-           
-       }else{
-            msg.innerHTML = username + " Incorect!";
+           window.open('utb.html', "_self");
+        }else{
+            msg.innerText = username + " is Incorect!" ;
+            
         }
    };
-});
+   
+}
