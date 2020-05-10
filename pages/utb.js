@@ -1,65 +1,22 @@
 
-// acitve the right menu
+// link html tags
+const iconList = document.getElementsByClassName("colorr"); 
+const pageList = document.getElementsByClassName("kort"); 
 
-const iconList = document.getElementsByClassName("colorr"); // take the element from HTMl5 into javascript
-for(var i = 0; i < iconList.length; i++){// here I run a for loop function to bring all the items inside the loop
- iconList[i].addEventListener("click", function(){ // for each item I give an eventListener that become clickable
-     var current = document.getElementsByClassName("active");// I took the extra class that I made in CSS to add to each of the item when its active
-     current[0].className = current[0].className.replace("active"); // I replace the class for each items
-     this.className += " active"; // added the active class to the current item.
-     
+// run a loop to count all my items and run the function for all of them
+for(let i = 0; i < iconList.length; i++){
+    // for each item I give an eventListener that become clickable
+    iconList[i].addEventListener("click", function(){ 
+        // MADE SOME VARIABLE AGAIN TO ACTIVE AND DEACTIVE
+        const activeLink = document.querySelector(".colorr.active");
+        const activePage = document.querySelector(".kort.active");
+        
+        // switch the icons
+        activeLink.classList.remove("active");
+        iconList[i].classList.add("active");
+        // switch the pages
+        activePage.classList.remove("active");
+        pageList[i].classList.add("active")
+ 
 });
 }
-// icons 
-
-
-const pages = document.getElementsByClassName("kort");
-
-const licenceB = document.querySelector(".car").addEventListener("click", btnCar);
-const licenceC = document.querySelector(".bok").addEventListener("click", btnBok);
-const licenceD = document.querySelector(".risk").addEventListener("click", btnRisk);
-const licenceE = document.querySelector(".fr").addEventListener("click", btnQes);
-const licenceF = document.querySelector(".lastbil").addEventListener("click", btnLastbil);
-
-
-
-
-function btnCar(){
-        document.querySelector(".k").style.cssText = "display: block;";
-        document.querySelector(".b").style.cssText = "display: none;";
-        document.querySelector(".r").style.cssText = "display: none;";
-        document.querySelector(".bk").style.cssText = "display: none;";
-        document.querySelector(".l").style.cssText = "display: none;";
-    }
-
-function btnBok(){
-    document.querySelector(".k").style.cssText = "display: none;";
-    document.querySelector(".b").style.cssText = "display: block;";
-    document.querySelector(".r").style.cssText = "display: none;";
-    document.querySelector(".bk").style.cssText = "display: none;";
-    document.querySelector(".l").style.cssText = "display: none;";
-}
-function btnRisk(){
-    document.querySelector(".k").style.cssText = "display: none;";
-    document.querySelector(".b").style.cssText = "display: none;";
-    document.querySelector(".r").style.cssText = "display: block;";
-    document.querySelector(".bk").style.cssText = "display: none;";
-    document.querySelector(".l").style.cssText = "display: none;";
-}
-function btnQes(){
-    document.querySelector(".k").style.cssText = "display: none;";
-    document.querySelector(".b").style.cssText = "display: none;";
-    document.querySelector(".r").style.cssText = "display: none;";
-    document.querySelector(".bk").style.cssText = "display: block;";
-    document.querySelector(".l").style.cssText = "display: none;";
-}
-
-function btnLastbil(){
-    document.querySelector(".k").style.cssText = "display: none;";
-    document.querySelector(".b").style.cssText = "display: none;";
-    document.querySelector(".r").style.cssText = "display: none;";
-    document.querySelector(".bk").style.cssText = "display: none;";
-    document.querySelector(".l").style.cssText = "display: block;";
-
-}
-
