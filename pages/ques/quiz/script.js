@@ -16,8 +16,6 @@ nextButton.addEventListener('click', () => {
   currentQuestionIndex++
   setNextQuestion()
 })
-
-// start function
 function startGame() {
   restartButton.style.cssText = "display: none;";
   startButton.classList.add('hide')
@@ -25,18 +23,15 @@ function startGame() {
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
   introText.classList.add('hide')
-  
-  // to run the next question
+
   setNextQuestion()
 }
 
-// run the next question function
 function setNextQuestion() {
   resetState()
   showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-// show and replace questions in the html tages
 function showQuestion(question) {
   questionElement.innerText = question.question
   question.answers.forEach(answer => {
@@ -51,7 +46,6 @@ function showQuestion(question) {
   })
 }
 
-// to reset for the next question
 function resetState() {
   clearStatusClass(document.body)
   nextButton.classList.add('hide')
@@ -60,10 +54,8 @@ function resetState() {
   }
 }
 
-
-// select answers and these values to check if its correct or wronge and do what comes after
-// used some event target and array to pick questions and find the value of it
 function selectAnswer(e) {
+
   const selectedButton = e.target
   const correct = selectedButton.dataset.correct
   setStatusClass(document.body, correct)
@@ -86,7 +78,6 @@ function selectAnswer(e) {
   }
 }
 
-// added some more visuals effect to the background if its correct than the background turn to green if not it turn to red color
 function setStatusClass(element, correct) {
   clearStatusClass(element)
   if (correct) {
@@ -99,13 +90,12 @@ function setStatusClass(element, correct) {
   }
 }
 
-// basicaly this function reset the background after it show the red or green color 
 function clearStatusClass(element) {
   element.classList.remove('correct')
   element.classList.remove('wrong')
   element.style.cssText = "background: none;";
 }
-// all the questions that generate randomly in the html tages.
+//
 // questions
 const questions = [
   {
