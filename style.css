@@ -135,22 +135,45 @@ Media query for the Header
 main 
 
 /////////////*/
+/*///////////
+
+slide show
+
+/////////////*/
+
+.slider{
+    height: 70vh;
+    position: relative;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    
+}
+
 
 #one{
+    top: 0;
+    left: 0;
+    position: absolute;
     width: 100%;
     height: 70vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url(imgs/doginthecar.jpg)no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    
 }
 .bg-one{
     width: 100%;
     height: 100%;
-    background: #fb358493;
+    background: #ff137250;
     
 }
 .intro-one{
@@ -273,7 +296,7 @@ text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px 
 
 ///////////// */
 
-@media only screen and (max-width: 500px){
+@media only screen and (max-width: 600px){
     #one{
         height: 100vh;
     }
@@ -308,6 +331,242 @@ text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px 
 
 }
 
+
+  /*/////// 
+    
+    third section profile inserted
+    
+    //////*/
+
+    
+.three {
+    background: url(/imgs/svgExported/background.svg)no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.bg-three {
+    height: 100%;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url(/imgs/svgExported/iconsLeft.svg)no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.title-sec-three {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.title-sec-three h1 {
+    color: #333;
+    margin-bottom: 3rem;
+}
+
+.img-sec-t {
+    width: 40px;
+    margin: 50px 0 100px 0;
+}
+
+.gallery-th {
+    width: 70%;
+    border-right: 2px solid #f14ea0;
+    border-top: 2px solid #f14ea0;
+    border-bottom: 10px solid #ba35f82d;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: minmax(300px, auto);
+    box-shadow: 0px 100px 100px -12px #f81ba338;
+    background: snow;
+}
+
+/****** first box *******/
+
+.gallery-th .g-f {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #fb3585;
+    padding: 20px;
+    color: white;
+}
+
+.g-f h3 {
+    text-align: left;
+    font-size: 22px;
+}
+
+.g-f p {
+    text-align: left;
+    margin: 20px 0 30px 0px;
+    color: #eeeeee;
+    font-size: 14px;
+}
+
+.g-f a {
+    text-decoration: none;
+    color: #333;
+    /* border: solid 1px #bf81ff; */
+    background: white;
+    border-radius: 50px;
+    padding: 10px 22px;
+    transition: 0.3s;
+}
+
+.g-f a:hover {
+    background: white;
+}
+
+.g-f a span {
+    font-size: 0;
+    color: #333;
+    transition: 0.2s;
+}
+
+.g-f a:hover>span {
+    font-size: 16px;
+    margin-left: 10px;
+    transition: 0.3s;
+}
+
+/****** first box *******/
+
+.overlay-th {
+    display: flex;
+    text-decoration: none;
+}
+
+.overlay-th div {
+    padding: 15px 25px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    background: linear-gradient(-25deg, #fb3585, rgba(255, 255, 255, 0));
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.overlay-th div:hover {
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.logo-dg {
+    margin: 10px;
+    background: url(../imgs/Logosm.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+}
+
+
+.g-t {
+    background: url(pages/products/pdc/marshallsHeadphone.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.g-th {
+    background: url(pages/products/pdc/belttwo.png)no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.g-fr {
+    background: url(pages/products/pdc/nokiaPhone.png)no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.g-fv {
+    background: url(pages/products/pdc/northfaceblack.png)no-repeat;
+    background-size: cover;
+    background-position: center;
+    flex: 0 0 2;
+}
+
+.g-sx {
+    background: url(pages/products/pdc/modelMarshall.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.portfolio-btn-th {
+    margin: 100px 0;
+}
+
+.portfolio-btn-th a {
+    text-decoration: none;
+    color: #225;
+    border: solid 1px #bf81ff;
+    border-radius: 50px;
+    padding: 10px 22px;
+}
+
+.portfolio-btn-th a:hover {
+    background: #225;
+    border-color: #225;
+    color: white;
+}
+
+.portfolio-btn-th a span {
+    font-size: 0;
+    color: #225;
+}
+
+.portfolio-btn-th a:hover>span {
+    font-size: 16px;
+    margin-left: 10px;
+    color: white;
+}
+@media only screen and (max-width: 1000px){
+    .gallery-th{
+        width: 90%;
+
+    }
+}
+@media only screen and (max-width: 750px){
+    .gallery-th{
+        grid-template-columns: 1fr 1fr;
+        width: 95%;
+        
+    }
+}
+@media only screen and (max-width: 600px){
+    .three{
+        width: 100%;   
+    }
+    .gallery-th{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+    .slider{
+        height: 100vh;
+    }
+}
+
+
+
 /*/////////////
 
 
@@ -318,19 +577,20 @@ text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px 
 
 #two{
     display: flex;
-    height: 30vh;
+    height: auto;
     background: snow;
     justify-content: center;
     width: 100%;
 }
 .bg-two{
     width: 100%;
+    height: 100%;
 }
 .intro-two{
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-top: -20px;
+    margin: 50px 0 0 0;
 }
 .service{
     background: snow;
@@ -349,7 +609,7 @@ text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px 
     display: flex;
     width: 60%;
     justify-content: center;
-    margin: auto;
+    margin: 0 auto 100px auto;
 }
 .pdc{
     display: flex;
@@ -360,7 +620,7 @@ text-shadow: 0 0 5px rgb(255, 255, 255), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px 
     box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.082);
 }
 .pdc:hover{
-    background: rgb(206, 206, 206);
+    background: rgb(245, 245, 245);
 }
 .pdc a{
     padding: 25px;
@@ -409,7 +669,7 @@ THREE
 #three{
     justify-content: center;
     align-items: center;
-    height: 70vh;
+    height: auto;
     display: flex;
     width: 100%;
 }
@@ -451,7 +711,7 @@ THREE
 .btn-three a{
     color: white;
     text-decoration: none;
-    background: #f55b6e;
+    background: #fb3585;
     padding: 12px 32px;
     overflow: hidden;
     position: absolute;
@@ -609,6 +869,7 @@ THREE
 }
 .title-ytb h2{
     margin-bottom: 1rem;
+    color: #333;
 }
 #span-ytb{
     color: #9999;
@@ -1095,4 +1356,158 @@ form fieldset input {
         width: 90%;
         margin: auto;
     }
+}
+
+
+
+/*
+
+Pop up window
+
+*/
+
+.windowPop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.89);
+    height: 100vh;
+    z-index: 2200;
+    display: none;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.forms{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    background: white;
+}
+.two{
+    background: url(pages/products/pdc/marshallHeadphone.png)no-repeat;
+    background-size: cover;
+    background-position:center;
+    color: #333;
+}
+
+
+.two h1, .two h2, .two p{
+    padding: 50px 10px;
+    background: rgba(0, 0, 0, 0.562);
+    padding: 12px;
+    color: white;
+}
+.btns{
+    margin: 50px 0;
+}
+
+.form a{
+    text-decoration: none;
+    background: #fb3585;
+    padding: 8px 16px;
+    width: 220px;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    transition: 0.2s;
+    background: #ffb655;
+}
+.form button{
+    text-decoration: none;
+    background: #225;
+    padding: 8px 16px;
+    width: 220px;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin: 10px 0;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.form a:hover, .form button:hover{
+    text-decoration: underline;
+    background: #333;
+    transition: 0.2s;
+}
+
+
+#logoPop{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fb3585;
+    text-decoration: underline;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.562);
+}
+
+.one{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: url(pages/imgs/licence.jpg)no-repeat;
+    background-size: cover;
+    background-position:center;
+    color: white;
+}
+.one h1, .one h2, .one p{
+    padding: 50px 10px;
+    background: rgba(0, 0, 0, 0.562);
+    padding: 12px;
+    color: white;
+}
+.visible{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px){
+    .windowPop{
+        flex-direction: column;
+        width: 100%;
+    }
+    .form{
+        width: 95%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    .korPackage{
+        display: none;
+    }
+
+}
+
+
+/*////////
+
+    scrollbar 
+
+////////*/
+::-webkit-scrollbar{
+    width: 6px;
+    background: white;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 20px #3333;
+}
+::-webkit-scrollbar-thumb{
+    background: #fb3585;
+    border-radius: 50px;
+    box-shadow: 0 0 10px #ff0b6d;
 }

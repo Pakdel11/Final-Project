@@ -44,3 +44,50 @@ window.onscroll = function () {
   }
   prevScrollpos = currentScrollpos;
 };
+
+
+/*  intro slider */
+
+const slider = document.querySelectorAll(".slider .slide");
+
+const time = 2000;
+let counter = 0;
+
+slider[counter].style.opacity = 1;
+setInterval(changeImg, time);
+function changeImg(){
+  
+  
+  slider[counter].style.opacity = 0;
+  counter = (counter + 1) % slider.length;
+  slider[counter].style.opacity = 1;
+}
+
+
+// pop up window
+
+t = setTimeout(openPopUp, 5000);
+const clsBtn = document.getElementsByClassName("no-tack");
+const windowP = document.querySelector(".windowPop");
+for(let i = 0; i < clsBtn.length; i++){
+  clsBtn[i].addEventListener('click', () =>{
+      windowP.style.cssText = "display: none";
+      clearInterval(openPopUp);
+    });
+  }  
+function openPopUp(){
+  windowP.style.cssText = "display: flex;";
+}
+
+
+const outsideClick = document.getElementsByClassName("forms");
+
+window.onclick = function(e){
+  var target = e.target;
+  if(target = outsideClick){
+    windowP.style.cssText = "display: none;";
+    console.log("hello its work")
+  }
+
+}
+
